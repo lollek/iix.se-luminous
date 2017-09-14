@@ -22,7 +22,14 @@
                t-conn
                {:username "Sam"
                 :password "Smith"})))
-    (is (= {:username  "Sam"
-            :password  "Smith"
-            :last_login nil}
-           (db/get-user t-conn {:username "Sam"})))))
+    (let [user (db/get-user t-conn {:username "Sam"})]
+      (is (= (keys user)
+             '(:id, :username, :password, :last_login)))
+      (is (> (user :id)
+             0))
+      (is (= (user :username)
+             "Sam"))
+      (is (= (user :password)
+             "Smith"))
+      (is (= (user :last_login)
+             nil)))))
