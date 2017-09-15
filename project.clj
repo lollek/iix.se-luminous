@@ -3,7 +3,8 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
 
-  :dependencies [[clj-time "0.14.0"]
+  :dependencies [[buddy "2.0.0"]
+                 [clj-time "0.14.0"]
                  [compojure "1.6.0"]
                  [conman "0.6.8"]
                  [cprop "0.1.11"]
@@ -13,6 +14,7 @@
                  [luminus-nrepl "0.1.4"]
                  [luminus/ring-ttl-session "0.3.2"]
                  [markdown-clj "1.0.0"]
+                 [metosin/compojure-api "1.1.11"]
                  [metosin/muuntaja "0.3.2"]
                  [metosin/ring-http-response "0.9.0"]
                  [mount "0.1.11"]

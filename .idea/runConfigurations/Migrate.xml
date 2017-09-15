@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Migrate" type="LeiningenRunConfiguration" factoryName="Leiningen" singleton="true">
+    <module name="iix.se-luminous" />
+    <arguments argument="run" />
+    <arguments argument="migrate" />
+    <setting name="profiles" value="" />
+    <setting name="trampoline" value="false" />
+    <method />
+  </configuration>
+</component>

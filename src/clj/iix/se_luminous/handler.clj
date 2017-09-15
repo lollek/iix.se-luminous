@@ -2,6 +2,7 @@
   (:require [compojure.core :refer [routes wrap-routes]]
             [iix.se-luminous.layout :refer [error-page]]
             [iix.se-luminous.routes.home :refer [home-routes]]
+            [iix.se-luminous.routes.api :refer [api-routes]]
             [compojure.route :as route]
             [iix.se-luminous.env :refer [defaults]]
             [mount.core :as mount]
@@ -16,6 +17,7 @@
     (-> #'home-routes
         (wrap-routes middleware/wrap-csrf)
         (wrap-routes middleware/wrap-formats))
+    #'api-routes
     (route/not-found
       (:body
         (error-page {:status 404
